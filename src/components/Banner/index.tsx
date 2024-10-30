@@ -2,7 +2,7 @@ import WpButton from "../WpButton";
 
 const Banner = () => {
     return (
-        <section className="w-full h-[84vh] bg-[#EBEBEB] flex items-center justify-around">
+        <section className="w-full h-[640px] bg-[#EBEBEB] flex items-center justify-around">
             <div className="container mx-auto h-[564px] grid grid-cols-3 py-10 ">
                 <div className="w-full max-w-[407px]  h-full  flex items-start  flex-col gap-4">
                     <h2 className="text-[#336DFF] uppercase font-semibold">Conheça agora</h2>
@@ -18,7 +18,7 @@ const Banner = () => {
                     </button>
                 </div>
                 <div className="w-full">
-                    <img src="/Assets/Banner/banner.svg" alt="" />
+                    <img src="/Assets/Banner/banner.svg" alt="" className="w-full h-full" />
                 </div>
                 <div className="w-full flex flex-col items-center gap-5">
                     <div className="w-[200px] h-[94px] bg-[#F4F4F4] rounded-md flex items-center justify-center gap-3 flex-col ">
