@@ -1,5 +1,6 @@
 import { links } from "@/utils/Mock/menu";
 import Link from "next/link";
+import { MenuModal } from "./Menu";
 
 const Menu = () => {
   return (
@@ -18,7 +19,7 @@ const Menu = () => {
       </div>
       <div className=" flex items-center gap-5">
       <img src="/Assets/Icons/cart.svg" alt="" />
-      <img src="/Assets/Icons/login.svg" alt="" />
+       <MenuModal/>
       </div>
     </nav>
   );
