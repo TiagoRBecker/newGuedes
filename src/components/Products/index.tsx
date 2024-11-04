@@ -3,13 +3,14 @@ import { useDisclosure } from "@chakra-ui/react";
 import ModalProduct from "./Modal";
 
 export type ProductsType = {
-  
+  id:number
   category: string;
   title: string;
   addCart?: () => void | undefined;
 };
-const Products = ({ category, title, addCart }: ProductsType) => {
+const Products = ({id, category, title, addCart }: ProductsType) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
+ 
   return (
     
     <div className="w-full h-full flex flex-col gap-4 bg-[#EFEFEF] rounded-[16px] p-9 bg-opacity-50">
@@ -22,7 +23,7 @@ const Products = ({ category, title, addCart }: ProductsType) => {
           Visualização Rápida
         </button>
       </div>
-      <ModalProduct isOpen={isOpen}  onClose={onClose}/>
+      <ModalProduct id={id} isOpen={isOpen}  onClose={onClose}/>
     </div>
   );
 };

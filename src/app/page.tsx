@@ -1,31 +1,23 @@
+"use client"
 import Banner from "@/components/Banner";
+import DocsEmphasis from "@/components/Docs";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Products from "@/components/Products";
 import Testimonials from "@/components/Testimonials";
+
 import { products } from "@/utils/Mock/menu";
 
 
 
+
 export default function Home() {
+ 
   return (
     <main>
       <Header />
       <Banner />
-      <section className="container mx-auto h-full flex flex-col py-36 items-center justify-center">
-        <h1 className="uppercase text-2xl py-10 text-left w-full">
-          Documentos em Destaque
-        </h1>
-        <div className="w-full grid grid-cols-3 gap-8">
-          {products.map((product, index: number) => (
-            <Products
-              key={index}
-              title={product.title}
-              category={product.category}
-            />
-          ))}
-        </div>
-      </section>
+      <DocsEmphasis/>
       <section className="w-full h-[431px] bg-[#336DFF]">
         <div className="w-full h-full grid grid-cols-2">
           <div className=" ">
@@ -61,6 +53,7 @@ export default function Home() {
           {products.map((product, index: number) => (
             <Products
               key={index}
+              id={product.id}
               title={product.title}
               category={product.category}
             />
@@ -91,6 +84,7 @@ export default function Home() {
       </section>
       <Testimonials />
       <Footer />
+      
     </main>
   );
 }

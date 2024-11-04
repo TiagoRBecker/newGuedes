@@ -1,8 +1,14 @@
 import { links } from "@/utils/Mock/menu";
 import Link from "next/link";
 import { MenuModal } from "./Menu";
+import { useCartStore } from "@/store/cartStore";
+import Cart from "../Cart";
+import { useState } from "react";
 
 const Menu = () => {
+  const[ showMenu,setShowMenu] = useState(false)
+  const cart = useCartStore((state) => state.cart);
+
   return (
     <nav className="w-full h-[104px] flex items-center justify-around">
       <div className="">
@@ -18,9 +24,20 @@ const Menu = () => {
         ))}
       </div>
       <div className=" flex items-center gap-5">
-      <img src="/Assets/Icons/cart.svg" alt="" />
+        <div className="relative cursor-pointer " onClick={()=>setShowMenu(true)}>
+        <img src="/Assets/Icons/cart.svg" alt="" className="w-10 h-10" />
+        <p className="w-6 h-6 bg-[#31AF97] rounded-full text-white flex items-center justify-center top-0 right-0 absolute">
+        {cart.length}</p>
+        </div>
+   
        <MenuModal/>
       </div>
+      {
+  (showMenu ) && (
+    <Cart handleCloseMenu={() => setShowMenu(false)} />
+  )
+}
+      
     </nav>
   );
 };
