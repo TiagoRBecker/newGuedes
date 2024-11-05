@@ -1,17 +1,49 @@
 export const links = [
 
-{id:1,name:"Anamneses"},
-{id:2,name:"Documentos Legais"},
-{id:3,name:"Fichas Clínicas"},
-{id:4,name:"Termos de Consentimento"},
-{id:5,name:"Documentos Personalizados"}
+{id:1,name:"Anamneses", products:[
+    {id:1,category:"Anamneses",title:"Contrato de Laser Lavieen",price:129},
+    {id:2,category:"Anamneses",title:"Contrato de Laser Lavieen",price:129},
+    {id:3,category:"Anamneses",title:"Contrato de Laser Lavieen",price:129},
+    {id:4,category:"Anamneses",title:"Contrato de Laser Lavieen",price:129},
+    {id:5,category:"Anamneses",title:"Contrato de Laser Lavieen",price:129},
+]
+    
+},
+{id:2,name:"Documentos Legais",products:[
+    {id:1,category:"Documentos Legais",title:"Contrato de Laser Lavieen",price:129},
+    {id:2,category:"Documentos Legais",title:"Contrato de Laser Lavieen",price:129},
+    {id:3,category:"Documentos Legais",title:"Contrato de Laser Lavieen",price:129},
+    {id:4,category:"Documentos Legais",title:"Contrato de Laser Lavieen",price:129},
+    {id:5,category:"Documentos Legais",title:"Contrato de Laser Lavieen",price:129},
+]},
+{id:3,name:"Fichas Clínicas",products:[
+    {id:1,category:"Fichas Clínicas",title:"Contrato de Laser Lavieen",price:129},
+    {id:2,category:"Fichas Clínicas",title:"Contrato de Laser Lavieen",price:129},
+    {id:3,category:"Fichas Clínicas",title:"Contrato de Laser Lavieen",price:129},
+    {id:4,category:"Fichas Clínicas",title:"Contrato de Laser Lavieen",price:129},
+    {id:5,category:"Fichas Clínicas",title:"Contrato de Laser Lavieen",price:129},
+]},
+{id:4,name:"Termos de Consentimento",products:[
+    {id:1,category:"Termos de Consentimento",title:"Contrato de Laser Lavieen",price:129},
+    {id:2,category:"Termos de Consentimento",title:"Contrato de Laser Lavieen",price:129},
+    {id:3,category:"Termos de Consentimento",title:"Contrato de Laser Lavieen",price:129},
+    {id:4,category:"Termos de Consentimento",title:"Contrato de Laser Lavieen",price:129},
+    {id:5,category:"Termos de Consentimento",title:"Contrato de Laser Lavieen",price:129},
+]},
+{id:5,name:"Documentos Personalizados",products:[
+    {id:1,category:"Documentos Personalizados",title:"Contrato de Laser Lavieen",price:129},
+    {id:2,category:"Documentos Personalizados",title:"Contrato de Laser Lavieen",price:129},
+    {id:3,category:"Documentos Personalizados",title:"Contrato de Laser Lavieen",price:129},
+    {id:4,category:"Documentos Personalizados",title:"Contrato de Laser Lavieen",price:129},
+    {id:5,category:"Documentos Personalizados",title:"Contrato de Laser Lavieen",price:129},
+]}
 ]
 export const utils = [
 
-    {id:1,name:"Sobre Nós"},
-    {id:2,name:"Política de Privacidade"},
-    {id:3,name:"Termos de uso"},
-    {id:4,name:"Termos de Consentimento"},
+    {id:1,name:"Sobre Nós",path:"/about"},
+    {id:2,name:"Política de Privacidade",path:"/privacy"},
+    {id:3,name:"Termos de uso",path:"/faq"},
+    {id:4,name:"Termos de Consentimento",path:"/questions"},
 
     ]
 export const products = [

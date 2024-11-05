@@ -1,3 +1,4 @@
+"use client"
 import { links } from "@/utils/Mock/menu";
 import Link from "next/link";
 import { MenuModal } from "./Menu";
@@ -10,18 +11,22 @@ const Menu = () => {
   const cart = useCartStore((state) => state.cart);
 
   return (
-    <nav className="w-full h-[104px] flex items-center justify-around">
+    <nav className="w-full h-[104px] flex items-center justify-around bg-[#EBEBEB] ">
       <div className="">
-        <img src="/Assets/Logo/logo.svg" alt="" />
+      <Link href={"/"}>
+      <img src="/Assets/Logo/logo.svg" alt="" />
+      </Link>
+    
       </div>
       <div className="flex items-center gap-4">
-      <li className="list-none text-[#336DFF] border-r border-[#336DFF]   px-2"><Link href={"#"}>Início</Link></li>
+      <li className="list-none text-[#336DFF] border-r border-[#336DFF]   px-2"><Link href={"/"}>Início</Link></li>
         {links.map((links, index: number) => (
          
           <li key={index} className=" list-none">
-            <Link href={"#"} className="">{links.name}</Link>
+            <Link href={`/categories/${links.id}`} className="">{links.name}</Link>
           </li>
         ))}
+        <li className=" list-none"><Link href={"/products"}>Produtos</Link></li>
       </div>
       <div className=" flex items-center gap-5">
         <div className="relative cursor-pointer " onClick={()=>setShowMenu(true)}>

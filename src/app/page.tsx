@@ -15,7 +15,7 @@ export default function Home() {
  
   return (
     <main>
-      <Header />
+
       <Banner />
       <DocsEmphasis/>
       <section className="w-full h-[431px] bg-[#336DFF]">
@@ -83,7 +83,7 @@ export default function Home() {
         </div>
       </section>
       <Testimonials />
-      <Footer />
+
       
     </main>
   );

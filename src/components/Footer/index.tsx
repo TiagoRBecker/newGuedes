@@ -2,7 +2,7 @@ import { links, utils } from "@/utils/Mock/menu";
 import Link from "next/link";
 
 const Footer = () => {
-    return ( <footer className="w-full h-full py-20 bg-white flex flex-col items-center justify-center ">
+    return ( <footer className="w-full h-full py-20 bg-white flex flex-col items-center justify-center shadow-2xl  ">
  <div className="container mx-auto grid grid-cols-4 gap-5">
   <div className="w-full h-full flex  justify-center">
     <img src="/Assets/Logo/logo.svg" alt="" className="w-[300px] " />
@@ -27,7 +27,7 @@ const Footer = () => {
         {utils.map((links, index: number) => (
          
           <li key={index} className=" list-none">
-            <Link href={"#"} className="">{links.name}</Link>
+            <Link href={links.path} className="">{links.name}</Link>
           </li>
         ))}
 </div>

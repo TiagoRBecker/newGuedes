@@ -1,4 +1,5 @@
 import { useCartStore } from "@/store/cartStore";
+import Link from "next/link";
 export type Props = {
 
     handleCloseMenu: () => void
@@ -64,7 +65,10 @@ const Cart = ({ handleCloseMenu }: Props) => {
             </div>
             <div className="w-full flex items-center justify-between gap-2 py-3">
                 <button className="w-[50%] py-4 border border-[#336DFF] rounded-full text-[10px]" onClick={handleCloseMenu}>Adicionar Mais Produtos</button>
-                <button className="w-[50%] py-4 bg-[#336DFF] text-white rounded-full text-[10px]">Finalizar Compra</button>
+                <Link href={"/cart"} className="w-[50%] py-4 bg-[#336DFF] text-white rounded-full text-[10px] flex items-center justify-center" onClick={handleCloseMenu}>
+                <button >Finalizar Compra</button>
+                </Link>
+            
               
             </div>
            
